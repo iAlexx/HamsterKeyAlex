@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Key Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Game Key Generator</h1>
+    <div>
+        <label for="game">Select a game:</label>
+        <select id="game">
+            <option value="1">Riding Extreme 3D</option>
+            <option value="2">Chain Cube 2048</option>
+            <option value="3">My Clone Army</option>
+            <option value="4">Train Miner</option>
+        </select>
+    </div>
+    <div>
+        <label for="keyCount">Enter the number of keys to generate:</label>
+        <input type="number" id="keyCount" min="1" max="10" value="1">
+    </div>
+    <button onclick="generateKeys()">Generate Keys</button>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
