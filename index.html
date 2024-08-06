@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Key Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <label for="game">Select a game:</label>
+        <select id="game">
+            <option value="1">Riding Extreme 3D</option>
+            <option value="2">Chain Cube 2048</option>
+            <option value="3">My Clone Army</option>
+            <option value="4">Train Miner</option>
+        </select>
+    </div>
+    <div>
+        <label for="keyCountSelect">Number of keys:</label>
+        <select id="keyCountSelect">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>
+        <span id="keyCountLabel">Number of keys: 1</span>
+    </div>
+    <button id="startBtn">Start Generating Keys</button>
+    <div id="progressContainer" class="hidden">
+        <div id="progressBar"></div>
+        <span id="progressText">0%</span>
+    </div>
+    <div id="keyContainer" class="hidden">
+        <h3 id="generatedKeysTitle">Generated Keys:</h3>
+        <div id="keysList"></div>
+        <button id="copyAllBtn" class="hidden">Copy All</button>
+    </div>
+    <div id="copyStatus" class="hidden">Copied to clipboard!</div>
+    <button id="generateMoreBtn" class="hidden">Generate More</button>
+    <button id="creatorChannelBtn">Creator's Channel</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
