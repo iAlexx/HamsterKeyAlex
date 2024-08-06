@@ -1,3 +1,23 @@
+async function generateKeys() {
+    const gameChoice = parseInt(document.getElementById('game').value);
+    const keyCount = parseInt(document.getElementById('keyCount').value);
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = 'Generating keys...';
+
+    try {
+        const keys = await main(gameChoice, keyCount);
+        if (keys.length > 0) {
+            resultsDiv.innerHTML = 'Generated Keys:<br>' + keys.join('<br>');
+        } else {
+            resultsDiv.innerHTML = 'No keys were generated.';
+        }
+    } catch (error) {
+        resultsDiv.innerHTML = `Error: ${error.message}`;
+    }
+}
+
+// Paste the rest of the JavaScript code here
+
 const games = {
     1: {
         name: 'Riding Extreme 3D',
